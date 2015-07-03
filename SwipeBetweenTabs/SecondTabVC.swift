@@ -10,9 +10,11 @@ import UIKit
 
 class SecondTabVC: UIViewController {
 
+    
     @IBAction func SwipeGestureLeft(sender: AnyObject) {
         tabBarController?.selectedIndex = 2
     }
+    
     @IBAction func SwipeGestureRight(sender: AnyObject) {
         tabBarController?.selectedIndex = 0
     }
