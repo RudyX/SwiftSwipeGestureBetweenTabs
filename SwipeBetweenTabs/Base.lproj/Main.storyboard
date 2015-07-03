@@ -1,25 +1,196 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f8f-QB-wTh">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Second TabVC-->
+        <scene sceneID="JUI-rb-We4">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Vp9-5b-MyT" customClass="SecondTabVC" customModule="SwipeBetweenTabs" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="mUL-XT-CaA"/>
+                        <viewControllerLayoutGuide type="bottom" id="QOf-jS-6Zm"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="SP1-eI-e5y">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtS-xC-NAH">
+                                <rect key="frame" x="16" y="28" width="568" height="515"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second Tab View Controller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIv-wf-QHr">
+                                        <rect key="frame" x="148" y="230" width="272" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="98b-ZG-o6g"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.4941176471" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="BIv-wf-QHr" secondAttribute="centerY" id="YKx-SY-wkk"/>
+                                    <constraint firstAttribute="centerX" secondItem="BIv-wf-QHr" secondAttribute="centerX" id="mLZ-hu-gih"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xtS-xC-NAH" firstAttribute="leading" secondItem="SP1-eI-e5y" secondAttribute="leading" constant="16" id="8Ch-N8-hn1"/>
+                            <constraint firstItem="xtS-xC-NAH" firstAttribute="top" secondItem="mUL-XT-CaA" secondAttribute="bottom" constant="8" id="hTU-2Y-lSP"/>
+                            <constraint firstAttribute="trailing" secondItem="xtS-xC-NAH" secondAttribute="trailing" constant="16" id="kkq-Kg-aqc"/>
+                            <constraint firstItem="QOf-jS-6Zm" firstAttribute="top" secondItem="xtS-xC-NAH" secondAttribute="bottom" constant="8" id="vZw-He-ixC"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="4yW-Jv-p3M" appends="YES" id="WxB-m9-mdA"/>
+                            <outletCollection property="gestureRecognizers" destination="mWJ-PD-lRF" appends="YES" id="ZXv-Ud-yNt"/>
+                        </connections>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="ehG-uS-qhe"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Si9-35-b1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="4yW-Jv-p3M">
+                    <connections>
+                        <action selector="SwipeGestureLeft:" destination="Vp9-5b-MyT" id="e5B-A7-UJn"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="mWJ-PD-lRF">
+                    <connections>
+                        <action selector="SwipeGestureRight:" destination="Vp9-5b-MyT" id="nco-7H-s47"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="719" y="715"/>
+        </scene>
+        <!--First TabVC-->
+        <scene sceneID="275-NH-krv">
+            <objects>
+                <viewController id="uoO-tu-jPz" customClass="FirstTabVC" customModule="SwipeBetweenTabs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xXz-KZ-0w8"/>
+                        <viewControllerLayoutGuide type="bottom" id="RQz-x2-OMI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5e7-8u-NGB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zS1-jd-kWW">
+                                <rect key="frame" x="16" y="28" width="568" height="515"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Tab View Controller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syn-Pe-iqe">
+                                        <rect key="frame" x="164.5" y="230" width="239" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="Lrv-v9-irY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1803921568627451" green="0.80000000000000004" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="Syn-Pe-iqe" secondAttribute="centerX" id="cLd-bW-MEK"/>
+                                    <constraint firstAttribute="centerY" secondItem="Syn-Pe-iqe" secondAttribute="centerY" id="jXH-a4-IZb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zS1-jd-kWW" firstAttribute="top" secondItem="xXz-KZ-0w8" secondAttribute="bottom" constant="8" id="3zp-f8-VmS"/>
+                            <constraint firstItem="zS1-jd-kWW" firstAttribute="leading" secondItem="5e7-8u-NGB" secondAttribute="leading" constant="16" id="C1Q-oV-uhY"/>
+                            <constraint firstAttribute="trailing" secondItem="zS1-jd-kWW" secondAttribute="trailing" constant="16" id="DMd-gl-dha"/>
+                            <constraint firstItem="RQz-x2-OMI" firstAttribute="top" secondItem="zS1-jd-kWW" secondAttribute="bottom" constant="8" id="lqt-la-4EE"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ATx-9x-QNh" appends="YES" id="OnN-ku-YW1"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="OPt-j9-Lt8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GKu-WL-yIr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="ATx-9x-QNh">
+                    <connections>
+                        <action selector="SwipeGestureLeft:" destination="uoO-tu-jPz" id="4UX-pk-8xc"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="719" y="53"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="K57-TV-kbp">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBarController" id="f8f-QB-wTh" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="qB9-u3-OXW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uoO-tu-jPz" kind="relationship" relationship="viewControllers" id="22P-hL-I3S"/>
+                        <segue destination="Vp9-5b-MyT" kind="relationship" relationship="viewControllers" id="TZH-XD-qvI"/>
+                        <segue destination="Tnn-Ja-HHn" kind="relationship" relationship="viewControllers" id="SvH-21-C0X"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDN-5R-fEC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-101" y="384"/>
+        </scene>
+        <!--Third TabVC-->
+        <scene sceneID="dI6-r4-gcv">
+            <objects>
+                <viewController id="Tnn-Ja-HHn" customClass="ThirdTabVC" customModule="SwipeBetweenTabs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Otz-q2-VbZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="C8l-Mo-IlS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Eqv-ag-jac">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kxg-U1-DCL">
+                                <rect key="frame" x="16" y="28" width="568" height="515"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Third Tab View Controller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsL-YX-lio">
+                                        <rect key="frame" x="161" y="230" width="246" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="Np2-an-9J4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="nsL-YX-lio" secondAttribute="centerY" id="GDO-tE-kdI"/>
+                                    <constraint firstAttribute="centerX" secondItem="nsL-YX-lio" secondAttribute="centerX" id="mNh-pa-0Gw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kxg-U1-DCL" firstAttribute="top" secondItem="Otz-q2-VbZ" secondAttribute="bottom" constant="8" id="B7M-JK-LuI"/>
+                            <constraint firstAttribute="trailing" secondItem="Kxg-U1-DCL" secondAttribute="trailing" constant="16" id="QOb-vx-0EA"/>
+                            <constraint firstItem="Kxg-U1-DCL" firstAttribute="leading" secondItem="Eqv-ag-jac" secondAttribute="leading" constant="16" id="b4J-Vb-NAp"/>
+                            <constraint firstItem="C8l-Mo-IlS" firstAttribute="top" secondItem="Kxg-U1-DCL" secondAttribute="bottom" constant="8" id="xuF-Fk-c1K"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="q1u-0C-yWD" appends="YES" id="FRD-ZJ-hWc"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="miG-Ir-rrO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yz9-2g-TVC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="q1u-0C-yWD">
+                    <connections>
+                        <action selector="SwipeGestureRight:" destination="Tnn-Ja-HHn" id="D7O-qJ-DuI"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="719" y="1451"/>
         </scene>
     </scenes>
 </document>
